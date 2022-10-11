@@ -1,0 +1,9 @@
+{
+    "name": "asadbek/mvc-framework",
+    "autoload": {
+        "psr-4": {
+            "Asadbek\\MvcFramework\\": "src/"
+        }
+    },
+    "require": {}
+}
