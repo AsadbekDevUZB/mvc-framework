@@ -2,7 +2,7 @@
     "name": "assaad/mvc-framework",
     "autoload": {
         "psr-4": {
-            "assaad\\phpmvc": "src/"
+            "assaad\\mvc": "src/"
         }
     },
     "require": {}
