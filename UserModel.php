@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace assaad\core;
 
-use app\core\db\DbModel;
+use assaad\core\db\DbModel;
 
 abstract class UserModel extends DbModel
 {

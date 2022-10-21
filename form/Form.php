@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\form;
+namespace assaad\core\form;
 
-use app\core\Model;
+use assaad\core\Model;
 
 class Form
 {

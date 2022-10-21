@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace assaad\core;
 
-use app\core\middlewares\BaseMiddleware;
+use assaad\core\middlewares\BaseMiddleware;
 
 class Controller
 {

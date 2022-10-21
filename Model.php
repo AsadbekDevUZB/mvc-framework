@@ -1,5 +1,5 @@
 <?php
-namespace app\core;
+namespace assaad\core;
 
 abstract class Model
 {

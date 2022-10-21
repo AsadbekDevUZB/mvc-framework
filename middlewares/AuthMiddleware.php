@@ -1,9 +1,10 @@
 <?php
 
-namespace app\core\middlewares;
+namespace assaad\core\middlewares;
 
 use app\core\Application;
-use app\core\exceptions\ForbidenException;
+use assaad\core\assaadlication;
+use assaad\core\exceptions\ForbidenException;
 
 class AuthMiddleware extends BaseMiddleware
 {

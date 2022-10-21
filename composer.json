@@ -1,5 +1,5 @@
 {
-    "name": "asadbek/mvc-framework",
+    "name": "assaad/mvc-framework",
     "autoload": {
         "psr-4": {
             "alex_snow\\MvcFramework\\": "src/"

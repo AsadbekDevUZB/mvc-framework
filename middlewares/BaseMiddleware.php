@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\middlewares;
+namespace assaad\core\middlewares;
 
-use app\core\Application;
+use assaad\core\Application;
 
 abstract class BaseMiddleware
 {
@@ -10,6 +10,6 @@ abstract class BaseMiddleware
 
     public function getCurrentActionName()
     {
-        return Application::$app->controller->action;
+        return Application::$assaad->controller->action;
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace assaad\core;
 
-use app\core\exceptions\NotFoundException;
+use assaad\core\exceptions\NotFoundException;
 
 class Router
 {

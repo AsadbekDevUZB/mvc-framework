@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core\exceptions;
+namespace assaad\core\exceptions;
 
 class NotFoundException extends \Exception
 {

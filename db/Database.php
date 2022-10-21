@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\db;
+namespace assaad\core\db;
 
-use app\core\Application;
+use assaad\core\assaadlication;
 
 class Database
 {
@@ -17,32 +17,32 @@ class Database
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
     }
 
-    public function applyMigrations()
+    public function assaadlyMigrations()
     {
         $this->createMigrationsTable();
-        $appliedMigrations = $this->getAppliedMigrations();
+        $assaadliedMigrations = $this->getassaadliedMigrations();
         
         $files = scandir(dirname(__DIR__).'/migrations/');
 
-        $toAppliedMigrations = array_diff($files,$appliedMigrations);
+        $toassaadliedMigrations = array_diff($files,$assaadliedMigrations);
         $newMigrations = [];
-        foreach ($toAppliedMigrations as $migration){
+        foreach ($toassaadliedMigrations as $migration){
             if($migration === "." || $migration === ".."){
                 continue;
             }
-            require_once Application::$ROOTDIR.'/migrations/'.$migration;
+            require_once assaadlication::$ROOTDIR.'/migrations/'.$migration;
             $className = pathinfo($migration,PATHINFO_FILENAME);
             $instance = new $className();
-            $this->log("Applying migration $migration");
+            $this->log("assaadlying migration $migration");
             $instance->up();
-            $this->log("Applied migration $migration");
+            $this->log("assaadlied migration $migration");
             $newMigrations[] = $migration;
         }
 
         if(!empty($newMigrations)){
             $this->saveMigrations($newMigrations);
         }else{
-            $this->log("All migrations are applied");
+            $this->log("All migrations are assaadlied");
         }
 
     }
@@ -57,7 +57,7 @@ class Database
             )   ENGINE = INNODB;");
     }
 
-    private function getAppliedMigrations()
+    private function getassaadliedMigrations()
     {
          $statement = $this->pdo->prepare("SELECT migration FROM migrations");
          $statement->execute();

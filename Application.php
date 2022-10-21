@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core;
+namespace assaad\core;
 
-use app\core\db\Database;
-use app\core\db\DbModel;
+use assaad\core\db\Database;
+use assaad\core\db\DbModel;
 
 class Application
 {
@@ -16,7 +16,7 @@ class Application
     public Session $session;
     public ?DbModel $user;
     public View $view;
-    public static  $app;
+    public static  $assaad;
     public ?Controller $controller = null;
     public string  $layout = 'main';
 
@@ -24,7 +24,7 @@ class Application
     {
         $this->userClass = $config['userClass'];
         self::$ROOTDIR = $rootPath;
-        self::$app = $this;
+        self::$assaad = $this;
         $this->request = new Request();
         $this->response = new Response();
         $this->view = new View();
@@ -43,7 +43,7 @@ class Application
 
     public static function isGuest() : bool
     {
-        return !self::$app->user;
+        return !self::$assaad->user;
     }
 
     public function run()
